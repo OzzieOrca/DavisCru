@@ -1,19 +1,20 @@
 library daviscru;
 
-import 'package:angular/angular.dart';
-import 'package:angular/application_factory.dart';
-import 'package:angular/routing/module.dart';
-//import 'package:logging/logging.dart';
+import 'package:angular2/angular2.dart';
 
-import 'package:daviscru/routing/daviscru_router.dart';
-import 'package:daviscru/component/title/title_component.dart';
+// These imports will go away soon:
+import 'package:angular2/src/reflection/reflection.dart' show reflector;
+import 'package:angular2/src/reflection/reflection_capabilities.dart' show ReflectionCapabilities;
+
+/*import 'package:daviscru/routing/daviscru_router.dart';
+import 'package:daviscru/component/title/title_component.dart';*/
 import 'package:daviscru/component/menu/menu_component.dart';
-import 'package:daviscru/component/page/page_component.dart';
+/*import 'package:daviscru/component/page/page_component.dart';
 import 'package:daviscru/component/stats/stats_panel_component.dart';
 import 'package:daviscru/service/authentication.dart';
-import 'package:daviscru/service/global.dart';
+import 'package:daviscru/service/global.dart';*/
 
-class RoutingModule extends Module {
+/*class RoutingModule extends Module {
   RoutingModule() {
     bind(RouteInitializerFn, toValue: davisCruRouteInitializer);
     //bind(NgRoutingUsePushState, toValue: new NgRoutingUsePushState.value(false));
@@ -48,16 +49,32 @@ class StatsModule extends Module {
     bind(StatsPanelComponent);
     bind(StatsRepository);
   }
+}*/
+
+@Component(
+    selector: 'daviscru-app'
+)
+@View(
+    template: '''
+      <main-menu></main-menu>
+      <ng-view></ng-view>
+    ''',
+    directives: const[MenuComponent]
+)
+class DavisCruApp {
 }
 
 void main() {
   /*Logger.root..level = Level.FINEST
     ..onRecord.listen((LogRecord r) => print(r.message));*/
-  applicationFactory()
+  /*applicationFactory()
       .addModule(new RoutingModule())
       .addModule(new TitleModule())
       .addModule(new MenuModule())
       .addModule(new PageModule())
       .addModule(new StatsModule())
-      .run();
+      .run();*/
+  reflector.reflectionCapabilities = new ReflectionCapabilities();
+
+  bootstrap(DavisCruApp);
 }

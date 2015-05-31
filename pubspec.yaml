@@ -1,18 +1,21 @@
 name: daviscru
 version: 0.0.1
 dependencies:
-  redstone: ">= 0.5.21"
-  redstone_mapper_mongo: any
-  grinder: any
-  shelf_static: any
-  dart_config: any
-  http: any
-  crypto: any
+  #redstone: "^0.6.0-beta.1+1"
+  #redstone_mapper_mongo: any
+  #grinder: ">=0.6.1 <0.7.0"
+  #shelf_static: any
+  #dart_config: any
+  #http: any
+  #crypto: any
 
   googleapis_auth: any
   browser: any
-  angular: ">= 1.1.0"
+  angular2: ">=2.0.0-alpha.25 <3.0.0"
 
   path: any
+#transformers:
+#- angular
 transformers:
-- angular
+- $dart2js:
+    commandLineOptions: [--enable-experimental-mirrors]

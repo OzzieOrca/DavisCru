@@ -1,7 +1,7 @@
 library auth;
 
 import 'dart:html';
-import 'package:angular/angular.dart';
+import 'package:angular2/angular2.dart';
 import "package:googleapis_auth/auth_browser.dart";
 import "dart:convert";
 

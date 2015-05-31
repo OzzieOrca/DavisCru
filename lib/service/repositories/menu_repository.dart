@@ -1,7 +1,7 @@
 part of menu;
 
-@Injectable()
 class MenuRepository {
+
   final Http _http;
 
   MenuRepository(this._http);
