@@ -2,16 +2,16 @@ library page;
 
 import 'dart:html';
 import 'package:angular/angular.dart';
-import 'package:daviscru/service/authentication.dart';
-import 'package:daviscru/service/global.dart';
-part 'package:daviscru/service/repositories/page_repository.dart';
+import 'package:daviscru_web/service/authentication.dart';
+import 'package:daviscru_web/service/global.dart';
+part 'package:daviscru_web/service/repositories/page_repository.dart';
 
-part 'package:daviscru/models/page.dart';
-part 'package:daviscru/models/widget.dart';
+part 'package:daviscru_web/models/page.dart';
+part 'package:daviscru_web/models/widget.dart';
 
 @Component(
     selector: 'page',
-    templateUrl: '/packages/daviscru/component/page/page.html',
+    templateUrl: '/packages/daviscru_web/component/page/page.html',
     module: PageComponent.module,
     useShadowDom: false)
 class PageComponent {

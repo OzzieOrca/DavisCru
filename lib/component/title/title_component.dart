@@ -1,7 +1,7 @@
 library title;
 
 import 'package:angular/angular.dart';
-import 'package:daviscru/service/global.dart';
+import 'package:daviscru_web/service/global.dart';
 
 @Component(
     selector: 'title',

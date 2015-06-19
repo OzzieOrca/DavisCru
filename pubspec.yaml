@@ -1,4 +1,4 @@
-name: daviscru
+name: daviscru_web
 version: 0.0.1
 dependencies:
   angular: ">= 1.1.0"

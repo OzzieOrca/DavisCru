@@ -2,14 +2,14 @@ library menu;
 
 import 'package:angular/angular.dart';
 import 'package:path/path.dart' as path;
-import 'package:daviscru/service/authentication.dart';
+import 'package:daviscru_web/service/authentication.dart';
 
-part 'package:daviscru/models/menu_item.dart';
-part 'package:daviscru/service/repositories/menu_repository.dart';
+part 'package:daviscru_web/models/menu_item.dart';
+part 'package:daviscru_web/service/repositories/menu_repository.dart';
 
 @Component(
     selector: 'main-menu',
-    templateUrl: '/packages/daviscru/component/menu/menu.html',
+    templateUrl: '/packages/daviscru_web/component/menu/menu.html',
     useShadowDom: false)
 class MenuComponent {
   final MenuRepository _repo;

@@ -1,16 +1,16 @@
 library stats_panel;
 
 import 'package:angular/angular.dart';
-import 'package:daviscru/service/authentication.dart';
+import 'package:daviscru_web/service/authentication.dart';
 import "dart:convert";
 
-part 'package:daviscru/service/repositories/stats_repository.dart';
+part 'package:daviscru_web/service/repositories/stats_repository.dart';
 
-part 'package:daviscru/models/stat.dart';
+part 'package:daviscru_web/models/stat.dart';
 
 @Component(
     selector: 'stats-panel',
-    templateUrl: '/packages/daviscru/component/stats/stats_panel.html',
+    templateUrl: '/packages/daviscru_web/component/stats/stats_panel.html',
     useShadowDom: false)
 class StatsPanelComponent {
   final StatsRepository _repo;
