@@ -1,9 +1,0 @@
-secret:                  ThisTokenIsNotSoSecretChangeIt
-oauth:
-google:
-  client_id:           XXXXXXXX.apps.googleusercontent.com
-  client_secret:       XXXXXXXX
-  scope:               "email profile"
-database:
-mongodb:
-  uri:                 mongodb://<dbuser>:<dbpassword>@sever.com:53139/database
